@@ -1,0 +1,59 @@
+<!--
+
+s/o luke smith for the inspiration for this site.
+
+s/o suckless software
+
+s/o andirueckel for the font
+
+-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>frankhagan.online - frank's personal site</title>
+</head>
+<body>
+<div class="rotating-bar">
+	<center><p class="rotating-text"><em>frankhagan.online - frank's personal site</em></p></center>
+</div>
+<h2><center>frankhagan.online is currently under construction...</center></h2>
+
+<ul class="centered-list">
+	<li><a href="#link1">linkedin</a></li>
+	<li><a href="https://github.com/frankischilling/">github</a></li>
+	<li><a href="dotfiles">dotfiles</a></li>
+	<li><a href="#link4">resume</a></li>
+	<li><a href="#link5">contact</a></li>
+</ul>
+
+<footer>
+	<div class="rotating-bar-music">
+	<center><p id="site-info"><em></em></p></center>
+	</div>
+	<p id="font-link">font: undefined medium (click me) </p>
+
+	<div id="font-options" style="display: none;">
+		<a href="https://github.com/andirueckel/undefined-medium/">GitHub</a>
+		<a href="https://undefined-medium.com/">Website</a>
+	</div>
+	<center><p id="website-label">website by frank</p></center>
+	<center><p id="website-label-link"><em>https://frankhagan.online</em></p></center>
+	<div id="volume-container">
+	    <label for="volume-slider">Volume:</label>
+	    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+	</div>
+</footer>
+<!-- <button id="skip-button">test</button> -->
+<audio id="backgroundMusic" loop autoplay volume="0.1">
+	<!-- Initially, the source will be empty until set by JavaScript -->
+	<source id="audioSource" src="" type="audio/mp3">
+</audio>
+
+</body>
+<script src="main.js"></script>
+</html>
