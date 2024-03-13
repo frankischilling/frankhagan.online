@@ -1,6 +1,6 @@
 @font-face {
     font-family: "undefined medium";
-    src: url("fonts/undefined-medium.ttf");
+    src: url("../fonts/undefined-medium.ttf");
 }
 
 body {
@@ -13,6 +13,16 @@ body {
 }
 
 h1, h2, p {
+    color: #eeeeee;
+}
+
+h2 {
+    text-align: center;
+    margin: 0; /* Add this to remove default margin */
+}
+
+footer a::selection {
+    background-color: #005577;
     color: #eeeeee;
 }
 
@@ -29,4 +39,221 @@ body::selection {
 #font-options a::selection {
     background-color: #005577;
     color: #eeeeee;
+}
+
+.rotating-bar {
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.rotating-bar p {
+    position: relative;
+    white-space: nowrap;
+    animation: rotate 10s linear infinite;
+}
+
+.rotating-bar-music {
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.rotating-bar-music p {
+    position: relative;
+    white-space: nowrap;
+    animation: rotate 20s linear infinite;
+}
+
+.rotating-text {
+    position: relative;
+    white-space: nowrap;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+footer {
+    margin-top: auto;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+.centered-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.centered-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    flex-direction: row;
+}
+
+.centered-list li::after {
+    content: "|";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.centered-list li:last-child::after {
+    content: "";
+}
+
+.centered-list a {
+    color: #bbbbbb;
+    background-color: #222222;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.centered-list a:hover {
+    color: #eeeeee;
+    background-color: #005577;
+}
+
+#font-options a {
+    color: #eeeeee;
+    background-color: #005577;
+    padding: 4px 6px;
+    text-decoration: none;
+    display: inline-block;
+    clear: both;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin: 2px 0;
+    z-index: 1; /* Increase this to a higher value */
+    width: 100px;
+    transition: all 0.3s ease;
+}
+
+#font-options a:hover {
+    color: #005577;
+    background-color: #eeeeee;
+}
+
+a:link {
+    color: #bbbbbb;
+    background-color: #222222;
+}
+
+a:visited {
+    color: #004561;
+    background-color: #222222;
+}
+
+#font-link {
+    position: absolute;
+	bottom: 0;
+	left: 0;
+	line-height: 0;
+	margin-bottom: -13px; 
+	z-index: 2;
+}   
+
+/* mobile styles */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1, h2, p {
+        font-size: 16px;
+    }
+
+    footer {
+        position: static;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .centered-list {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .centered-list li::after {
+        content: "";
+    }
+
+    #font-options {
+        display: block;
+        text-align: center;
+        margin-top: 10px !important; /* Adjust margin for spacing */
+    }
+
+    #font-link {
+        margin-bottom: 10px !important; /* Decrease margin to move the font link higher */
+    }
+}
+
+/* Styling for the volume bar container */
+#volume-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right side */
+    margin-top: 10px; /* Adjust the margin as needed */
+    opacity: 1; /* Set the initial opacity to fully visible */
+    transition: opacity 0.3s ease;
+	z-index: 2;
+}
+
+/* Styling for the volume bar */
+#volume-bar {
+    height: 4px; /* Make it slimmer */
+    width: 100%; /* Set it to one long bar */
+    background: linear-gradient(to right, #222222 0%, #3498db 100%); /* Linear gradient for color transition */
+    border-radius: 2px;
+    transition: background 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Styling for the volume slider */
+#volume-slider {
+    width: 50px; /* Adjust the width as needed */
+    background-color: #222222;
+    color: #eeeeee;
+    border: none;
+    outline: none;
+    z-index: 2;
+}
+
+/* Styling for the skip button */
+#skip-button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #005577;
+    color: #eeeeee;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 5px; /* Adjust margin as needed */
+}
+
+#skip-button:hover {
+    background-color: #004561;
+    color: #ffffff;
+}
+
+#website-label-link {
+    position: absolute;
+    right: 0;
+    left: 0;
+    color: #005577;
+    z-index: 1; /* Lower z-index */
 }

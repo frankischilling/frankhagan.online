@@ -50,7 +50,7 @@ body::selection {
 .rotating-bar p {
     position: relative;
     white-space: nowrap;
-    animation: rotate 10s linear infinite;
+    animation: rotate 15s linear infinite;
 }
 
 .rotating-bar-music {
