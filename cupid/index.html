@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupid's Crazy Adventures!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffe6f2; /* Let's make it a fun pink background */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Because why not? */
+        }
+        h1, h2, h3 {
+            color: #ff4d94; /* Pink headers for more fun */
+            text-shadow: 2px 2px 4px #660033; /* A subtle shadow effect for headers */
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px; /* Rounded corners for the content */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* A shadow effect for the content */
+        }
+        header {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 50%; /* Make the cat image round */
+            border: 5px solid #ff4d94; /* Pink border around the cat image */
+            box-shadow: 0 0 20px rgba(255, 77, 148, 0.5); /* A pink shadow for the cat image */
+            margin-bottom: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20%; /* Slightly rounded corners for gallery images */
+            margin: 10px;
+            transform: rotate(-5deg); /* Rotate gallery images slightly */
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: rotate(5deg) scale(1.1); /* Spin and scale up images on hover */
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+        footer a {
+            color: #ff4d94;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        p,ul {
+        	color: #ff4d94;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <header>
+        <h1>Welcome to Cupid's Crazy Adventures!</h1>
+        <img src="images/cupid.png" alt="Cupid the Cat">
+    </header>
+    <section>
+        <h2>About Cupid</h2>
+        <p>Cupid is not just your ordinary cat. He's a ninja in disguise, a master of mischief, and a connoisseur of chaos!</p>
+        <p>With his adorable face and mischievous antics, Cupid brings joy and laughter to everyone he meets.</p>
+    </section>
+    <section>
+        <h2>Cupid's Top Moments</h2>
+        <ul>
+            <li>Caught stealing treats from the cookie jar</li>
+            <li>Chased his own tail for an hour straight</li>
+            <li>Successfully pretended to be a potted plant</li>
+            <li>Stole the neighbor's dog's toy and played keep-away for hours</li>
+            <li>Mastered the art of knocking things off shelves</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="images/cupid.png" alt="Cupid the Cat">
+            <img src="images/cupid.png" alt="Cupid the Cat">
+            <img src="images/cupid.png" alt="Cupid the Cat">
+            <img src="images/cupid.png" alt="Cupid the Cat">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; dupid</p>
+    </footer>
+</div>
+</body>
+</html>
